@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Registro / Login com Tema</title>
-<link rel="stylesheet" href="index.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Registro / Login com Tema</title>
+  <link rel="stylesheet" href="index.css">
 </head>
+
 <body>
   <button class="theme-toggle" id="themeToggle">Modo Escuro</button>
 
@@ -14,41 +16,44 @@
     <div id="registerDiv">
       <h2>Registrar</h2>
       <form id="registerForm">
-        <input type="text" placeholder="Nome completo" required registerName minlength="4"/>
-        <input type="email" placeholder="Email" required registerEmail minlength="6"/>
-        <input type="password" placeholder="Senha" required registerPassword minlength="5"/>
+        <input type="text" placeholder="Nome completo" required registerName minlength="4" />
+        <input type="email" placeholder="Email" required registerEmail minlength="6" />
+        <input type="password" placeholder="Senha" required registerPassword minlength="5" />
         <button type="submit" registerSubmit>Registrar</button>
       </form>
     </div>
 
   </div>
 
-    <div class="test-section">
-        <button class="test-button" unitTest>Teste Unitário</button>
-        <button class="test-button" componentTest>Teste de Componentes</button>
+  <div class="test-section">
+    <button class="test-button" unitTest>Teste Unitário</button>
+    <button class="test-button" componentTest>Teste de Componentes</button>
+    <h1 tituloTeste></h1>
     <div id="testOutput" class="test-output">
+      
+    </div>
   </div>
- </div>
 
   <script src="./script/register.js"></script>
   <script src="./script/rodarTestes.js"></script>
   <script src="./tests/unitario.test.js"></script>
   <script src="./tests/component.test.js"></script>
 
-<script>
+  <script>
 
-  // Tema claro/escuro
-  const themeToggle = document.getElementById('themeToggle')
-  const body = document.body
+    // Tema claro/escuro
+    const themeToggle = document.getElementById('themeToggle')
+    const body = document.body
 
-  themeToggle.addEventListener('click', () => {
-    body.classList.toggle('dark')
-    if(body.classList.contains('dark')) {
-      themeToggle.textContent = 'Modo Claro'
-    } else {
-      themeToggle.textContent = 'Modo Escuro'
-    }
-  })
-</script>
+    themeToggle.addEventListener('click', () => {
+      body.classList.toggle('dark')
+      if (body.classList.contains('dark')) {
+        themeToggle.textContent = 'Modo Claro'
+      } else {
+        themeToggle.textContent = 'Modo Escuro'
+      }
+    })
+  </script>
 </body>
+
 </html>

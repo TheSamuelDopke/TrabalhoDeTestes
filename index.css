@@ -1,6 +1,7 @@
   * {
     box-sizing: border-box;
   }
+
   body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: #f0f4f8;
@@ -14,31 +15,37 @@
     display: flex;
     flex-direction: column;
   }
+
   body.dark {
     background: #121212;
     color: #eee;
   }
+
   .container {
     background: #fff;
     padding: 2.5rem 3rem;
     border-radius: 10px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     width: 350px;
     transition: background-color 0.3s, box-shadow 0.3s;
     margin-bottom: 20px;
   }
+
   body.dark .container {
     background: #1e1e1e;
     box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1);
   }
+
   h2 {
     text-align: center;
     margin-top: -10px;
   }
+
   form {
     display: flex;
     flex-direction: column;
   }
+
   input[type="text"],
   input[type="email"],
   input[type="password"] {
@@ -51,12 +58,14 @@
     background: #fff;
     color: #333;
   }
+
   input[type="text"]:focus,
   input[type="email"]:focus,
   input[type="password"]:focus {
     border-color: #4a90e2;
     outline: none;
   }
+
   body.dark input[type="text"],
   body.dark input[type="email"],
   body.dark input[type="password"] {
@@ -64,11 +73,13 @@
     color: #eee;
     border-color: #555;
   }
+
   body.dark input[type="text"]:focus,
   body.dark input[type="email"]:focus,
   body.dark input[type="password"]:focus {
     border-color: #4a90e2;
   }
+
   button {
     padding: 12px;
     background-color: #4a90e2;
@@ -80,33 +91,41 @@
     font-size: 1rem;
     transition: background-color 0.3s;
   }
+
   button:hover {
     background-color: #357ABD;
   }
+
   .toggle-link {
     margin-top: 1.2rem;
     text-align: center;
     font-size: 0.9rem;
     color: #666;
   }
+
   .toggle-link a {
     color: #4a90e2;
     cursor: pointer;
     text-decoration: none;
     font-weight: 600;
   }
+
   .toggle-link a:hover {
     text-decoration: underline;
   }
+
   body.dark .toggle-link {
     color: #aaa;
   }
+
   body.dark .toggle-link a {
     color: #79aaff;
   }
+
   .hidden {
     display: none;
   }
+
   /* Botão de troca de tema */
   .theme-toggle {
     position: absolute;
@@ -121,78 +140,89 @@
     font-weight: 600;
     transition: background-color 0.3s;
   }
+
   .theme-toggle:hover {
     background-color: #357ABD;
   }
+
   body.dark .theme-toggle {
     background-color: #79aaff;
     color: #121212;
   }
+
   body.dark .theme-toggle:hover {
     background-color: #5b8fe3;
   }
 
   .test-section {
- display: flex;
- flex-direction: column;
- align-items: center;
- background: #fff;
- padding: 1.5rem 2rem;
- border-radius: 10px;
- box-shadow: 0 8px 20px rgba(0,0,0,0.1);
- width: 350px;
- transition: background-color 0.3s, box-shadow 0.3s;
- margin-top: 20px; /* Space from the registration container */
-}
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    padding: 1.5rem 2rem;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    margin-top: 20px;
+    /* Space from the registration container */
+  }
 
-body.dark .test-section {
- background: #1e1e1e;
- box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1);
-}
+  body.dark .test-section {
+    background: #1e1e1e;
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1);
+  }
 
-.test-button {
- width: 100%; /* Make buttons full width of the test-section */
- margin-bottom: 15px; /* Space between buttons */
- padding: 10px;
- background-color: #5cb85c; /* A different color for test buttons */
- font-weight: 600;
- color: white;
- border: none;
- border-radius: 6px;
- cursor: pointer;
- font-size: 1rem;
- transition: background-color 0.3s;
-}
+  .test-button {
+    width: 100%;
+    /* Make buttons full width of the test-section */
+    margin-bottom: 15px;
+    /* Space between buttons */
+    padding: 10px;
+    background-color: #5cb85c;
+    /* A different color for test buttons */
+    font-weight: 600;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+  }
 
-.test-button:hover {
- background-color: #4cae4c;
-}
+  .test-button:hover {
+    background-color: #4cae4c;
+  }
 
-body.dark .test-button {
- background-color: #6bc96b; /* Dark mode color for test buttons */
- color: #ffffff;
-}
+  body.dark .test-button {
+    background-color: #6bc96b;
+    /* Dark mode color for test buttons */
+    color: #ffffff;
+  }
 
-body.dark .test-button:hover {
- background-color: #59b259;
-}
+  body.dark .test-button:hover {
+    background-color: #59b259;
+  }
 
-.test-output {
- background: #f9f9f9;
- border: 1px solid #ddd;
- border-radius: 6px;
- padding: 15px;
- min-height: 100px; /* Give it some initial height */
- width: 100%;
- overflow-y: auto; /* Enable scrolling if content overflows */
- font-family: 'Courier New', Courier, monospace; /* Monospace font for test results */
- font-size: 0.9em;
- color: #333;
- transition: background-color 0.3s, border-color 0.3s, color 0.3s;
-}
+  .test-output {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 15px;
+    min-height: 100px;
+    /* Give it some initial height */
+    width: 100%;
+    overflow-y: auto;
+    /* Enable scrolling if content overflows */
+    font-family: 'Courier New', Courier, monospace;
+    /* Monospace font for test results */
+    font-size: 0.9em;
+    color: #333;
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+  }
 
-body.dark .test-output {
- background: #2a2a2a;
- border-color: #555;
- color: #eee;
-}
+  body.dark .test-output {
+    background: #2a2a2a;
+    border-color: #555;
+    color: #eee;
+  }

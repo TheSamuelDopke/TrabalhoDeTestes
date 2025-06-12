@@ -1,29 +1,33 @@
 const resultadosDiv = document.getElementById("testOutput");
-
+//Contagem de testes
+var count = 1
 function testar(nomeDoTeste, funcaoDeTeste) {
-    
+
     const p = document.createElement('p')
+
     try {
         funcaoDeTeste();
-        p.textContent = `✅ ${nomeDoTeste}`
+        p.textContent = `✅ ${count} - ${nomeDoTeste}`
         p.style.color = "#28a745";
 
     } catch (erro) {
         p.textContent = `❌ ${nomeDoTeste} - ${erro.message}`;
         p.style.color = "#dc3545";
     }
-    if(resultadosDiv){
-        resultadosDiv.appendChild(p) 
-    }else {
+    if (resultadosDiv) {
+        resultadosDiv.appendChild(p)
+    } else {
         console.error("Elemento com ID 'testOutput' não encontrado!");
     }
-
+    count++
 }
 
 document.querySelector("[componentTest]").addEventListener("click", () => {
-    if(resultadosDiv){
+    if (resultadosDiv) {
         resultadosDiv.textContent = "";
-    }else{
+        //Reseta a quantidade de testes
+        count = 1
+    } else {
         console.error("Elemento com ID 'testOutput' não encontrado!");
         return; // Sai se o elemento não for encontrado
     }
@@ -37,6 +41,8 @@ document.querySelector("[componentTest]").addEventListener("click", () => {
 
 document.querySelector("[unitTest]").addEventListener("click", () => {
     document.getElementById("testOutput").textContent = "";
+    //Reseta a quantidade de testes
+    count = 1
     if (typeof runUnitTests === "function") {
         runUnitTests();
     } else {
